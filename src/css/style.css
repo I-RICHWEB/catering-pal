@@ -1,0 +1,32 @@
+:root {
+  --font-body: "Roboto", sans-serif;
+  --font-headline: "Oswald", sans-serif;
+  /* colors */
+  --primary-color: #058e3f;
+  --secondary-color: #32936f;
+  --tertiary-color: #2bc016;
+  --variant-color: #096b72;
+  --light-grey: #d0d0d0;
+  --dark-grey: #303030;
+
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  color: var(--dark-grey);
+}
+
+img {
+  max-width: 100%;
+}
