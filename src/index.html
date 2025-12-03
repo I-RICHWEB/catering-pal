@@ -23,24 +23,29 @@
     <main class="rule">
       <!-- This section will contain all the hero display items. -->
       <section class="hero-con">
-        <img id="heros" class="hero-images" src="#" alt="#" />
-        <p>Learn about all the amazing meals, and become a pro!</p>
+        <div id="hero">
+          <img id="heros" class="hero-images" src="#" alt="#" height="300px" />
+        </div>
+        <p>
+          <strong>Cooking made easy!</strong> <br />
+          You can learn to cook all the amazing meals we have, and become a pro!
+        </p>
       </section>
 
       <!-- This next section will hold the recent meals cards. -->
-      <section class="recent card">
-        <h2>Recently View</h2>
-        <ul>
-          <li>
-            <div class="recent-container">
+      <section class="recent-card">
+        <h2>Recently View Meals:</h2>
+        <ul class="cardlist">
+          <li class="card">
+            <div class="recent-img-con">
               <img
                 class="recent-image"
                 src="./images/heros/barbecue.jpg"
                 alt="barbecue.jpg"
               />
             </div>
-            <h3 id="recent-name">Meal Name</h3>
-            <p id="recent-category">Category</p>
+            <h3 id="recent-name">Meal Name:</h3>
+            <p id="recent-category">Category:</p>
           </li>
         </ul>
       </section>
@@ -48,8 +53,10 @@
       <!-- This section will display all the meals categories from the API. -->
       <div>
         <h2>Meal Categories:</h2>
-        <ul class="category list">
-          <li class="category-card card">A category card</li>
+        <ul class="category cardlist">
+          <li class="card">
+            This is the position for all the categories card from the API
+          </li>
         </ul>
       </div>
     </main>
