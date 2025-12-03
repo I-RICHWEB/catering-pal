@@ -9,54 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="shortcut icon"
-      href="./images/logo/site-icon.png"
+      href="/images/logo/site-icon.png"
       type="image/x-icon"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </head>
   <body>
-    <header class="rule">
-      <div>
-        <a id="home-link" href="/">
-          <img
-            id="icon"
-            src="./images/logo/site-icon.png"
-            alt="site-icon.png"
-          />
-          <div id="name">CATERING-<span>PAL</span></div>
-        </a>
-      </div>
-      <ul>
-        <li>
-          <a href="#">Favorite Meals</a>
-        </li>
-        <li><a href="#">Learned Meals</a></li>
-        <li><a href="#">About Us</a></li>
-      </ul>
-    </header>
+    <header class="rule headings"></header>
     <main class="rule">
-      <div class="hero-con">
+      <!-- This section will contain all the hero display items. -->
+      <section class="hero-con">
         <img id="heros" class="hero-images" src="#" alt="#" />
         <p>Learn about all the amazing meals, and become a pro!</p>
-      </div>
-      <div class="recent-card">Recent Meal View</div>
+      </section>
+
+      <!-- This next section will hold the recent meals cards. -->
+      <section class="recent card">
+        <h2>Recently View</h2>
+        <ul>
+          <li>
+            <div class="recent-container">
+              <img
+                class="recent-image"
+                src="./images/heros/barbecue.jpg"
+                alt="barbecue.jpg"
+              />
+            </div>
+            <h3 id="recent-name">Meal Name</h3>
+            <p id="recent-category">Category</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- This section will display all the meals categories from the API. -->
       <div>
         <h2>Meal Categories:</h2>
-        <ul>
-          <li>A category card</li>
+        <ul class="category list">
+          <li class="category-card card">A category card</li>
         </ul>
       </div>
     </main>
 
-    <footer>
-      <p>
-        🌳💐WDD330 Final Project | 😎Uyiosa Richmond Izekor | Catering-Pal🍔🌳💐
-      </p>
-      <p>&copy;2025</p>
-    </footer>
+    <footer class="footer"></footer>
   </body>
 </html>

@@ -33,3 +33,98 @@ img {
 .rule {
   border-bottom: 3px solid var(--secondary-color);
 }
+header {
+  padding: 0.6rem;
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+}
+#icon {
+  width: 60px;
+}
+.icon-con {
+  display: flex;
+  flex-direction: row;
+}
+#home-link {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+#name {
+  display: inline;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--variant-color);
+  & span {
+    color: var(--secondary-color);
+  }
+}
+nav {
+  padding: 0.4rem;
+
+  & ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    & li {
+      text-align: center;
+
+      & a {
+        text-decoration: none;
+        color: var(--dark-grey);
+        padding: 0.2rem;
+        font-family: var(--font-body);
+        border: 2px solid var(--variant-color);
+        border-radius: 8px;
+        margin: auto 0.3rem;
+        color: var(--variant-color);
+      }
+      :hover {
+        background-color: var(--variant-color);
+        color: #fff;
+        border: none;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  & .select-con {
+    width: 120px;
+    height: auto;
+
+    .nav-selection {
+      width: 100%;
+      background-image: url("../public/images/logo/menu-icon-green.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-position: center;
+
+      #empty {
+        display: none;
+      }
+    }
+    .nav-selection:focus {
+      outline: none;
+    }
+
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+}
