@@ -1,13 +1,8 @@
 /* ******************************************
  ** Importing all the neccessary tools.
  ** *************************************** */
-import { heroSlideShow, loadHeaderFooter } from "./utility.mjs";
-import Categories from "./categories.mjs";
-
-/* ******************************************
- ** Calling the heroSlideShow function to action
- ** *************************************** */
-heroSlideShow();
+import { loadHeaderFooter, getParameter } from "./utility.mjs";
+import Meals from "./meal-list.mjs";
 
 /* ******************************************
  ** Calling the loadHeaderFooter function to
@@ -16,8 +11,10 @@ heroSlideShow();
 loadHeaderFooter();
 
 /* ******************************************
- ** Creating a new instance of the category
- ** class and initializing it.
+ ** Extracting the parameter from the URL
+ ** and create a new instance of the meals
+ ** class to render the meals dynamically.
  ** *************************************** */
-const category = new Categories();
-category.init();
+const categoryName = getParameter("category");
+const meals = new Meals(categoryName);
+meals.init();

@@ -65,6 +65,12 @@ export async function loadHeaderFooter() {
 }
 
 /* ******************************************
- ** This function is going to load the header
- ** and footer from the partials folder.
+ ** This function will get parameters from the
+ ** the URL and will return it.
  ** *************************************** */
+export function getParameter(key) {
+  const searchStr = window.location.search;
+  const pageUrl = new URLSearchParams(searchStr);
+  const parameter = pageUrl.get(key);
+  return parameter;
+}
