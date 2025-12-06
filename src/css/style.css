@@ -224,6 +224,51 @@ nav {
     }
   }
 }
+
+/* ******************************************
+ ** The css rules for the detail page view.
+ ** *************************************** */
+.dropdown-con {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  background-color: #058e3e;
+  border: none;
+  border-radius: 10px;
+
+  /* The drop down button */
+  #dropdown-btn {
+    width: 100%;
+    padding: 10px;
+    font-family: var(--font-body);
+    font-size: large;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  #dropdown-btn:hover {
+    background: #2bc016;
+  }
+  #meal-guide {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: var(--small-font);
+    /* position: absolute; */
+
+    li {
+      padding: 5px;
+    }
+  }
+  .learn {
+    width: 100%;
+    display: none;
+  }
+}
 /* ******************************************
  ** The @media css rules starts from here.
  ** *************************************** */

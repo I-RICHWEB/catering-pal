@@ -2,7 +2,6 @@
  ** Importing all the neccessary tools.
  ** *************************************** */
 import ApiServices from "./apiServices.mjs";
-import { renderTemplate } from "./utility.mjs";
 
 /* ******************************************
  ** Making a new instance of the ApiServices
