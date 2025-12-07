@@ -26,7 +26,7 @@ export function heroSlideShow() {
   }
 
   updateImageSrc();
-  setInterval(updateImageSrc, 5000);
+  setInterval(updateImageSrc, 3000);
 }
 
 /* ******************************************
