@@ -131,6 +131,11 @@ nav {
   }
 }
 
+main {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 /* ******************************************
  ** The css rules for the hero images sections
  ** *************************************** */
@@ -226,51 +231,269 @@ nav {
 }
 
 /* ******************************************
- ** The css rules for the detail page view.
+ ** The css rules for the categories view list.
+ ** *************************************** */
+.category {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  li {
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    margin: 0.5rem;
+    border: 2px solid var(--variant-color);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px var(--dark-grey);
+    transition: box-shadow 1.5s;
+
+    a {
+      text-decoration: none;
+      border-radius: 10px;
+
+      h3 {
+        padding: 10px;
+        font-family: var(--font-headline);
+        color: var(--secondary-color);
+        font-size: larger;
+      }
+      p {
+        padding: 10px;
+        font-family: var(--font-body);
+        color: var(--dark-grey);
+      }
+    }
+  }
+  li:hover {
+    box-shadow: 2px 4px 4px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    animation: cardAnimation 3s ease-in-out infinite;
+  }
+
+  li::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+@keyframes cardAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(13, 154, 119, 0.595);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(13, 154, 119, 0.595);
+  }
+}
+
+/* ******************************************
+ ** The css rules for the meals list view.
+ ** *************************************** */
+.meal {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+
+  li {
+    width: 250px;
+    height: 330px;
+    margin: 0.5rem;
+    border: 2px solid var(--variant-color);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px var(--dark-grey);
+    overflow: hidden;
+
+    a {
+      text-decoration: none;
+
+      div {
+        width: 100%;
+        overflow: hidden;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      h3 {
+        font-family: var(--font-headline);
+        font-size: larger;
+        padding-left: 0.4rem;
+        padding-top: 0.4rem;
+        color: var(--secondary-color);
+      }
+    }
+  }
+  li:hover {
+    box-shadow: 2px 4px 4px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    animation: cardAnimation 3s ease-in-out infinite;
+  }
+  li::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+/* ******************************************
+ ** The css rules for the dropdown information
+ ** of the the meal in detail page view.
  ** *************************************** */
 .dropdown-con {
-  position: relative;
   width: 100%;
   text-align: left;
-  background-color: #058e3e;
+  background-color: #148f8a99;
   border: none;
   border-radius: 10px;
+  margin: 1rem auto;
 
   /* The drop down button */
   #dropdown-btn {
     width: 100%;
-    padding: 10px;
-    font-family: var(--font-body);
+    padding: 5px;
+    font-family: var(--font-headline);
     font-size: large;
     background: none;
-    color: #fff;
+    color: #0b0a0a;
     cursor: pointer;
     border: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    font-weight: bold;
+    position: relative;
+
+    #sign {
+      margin-right: 3px;
+      display: inline-block;
+      transition: transform 0.5s ease;
+      position: absolute;
+      right: 10px;
+    }
+    #sign.learn {
+      transform: rotate(180deg);
+    }
   }
   #dropdown-btn:hover {
-    background: #2bc016;
+    border: 2px solid var(--dark-grey);
+    border-radius: 10px;
   }
+
   #meal-guide {
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
     font-size: var(--small-font);
-    /* position: absolute; */
+    transition: max-height 1.5s ease;
 
     li {
-      padding: 5px;
+      padding: 8px;
+      font-family: var(--font-body);
     }
   }
-  .learn {
-    width: 100%;
-    display: none;
+  #meal-guide.learn {
+    max-height: 400px;
   }
+  p {
+    width: 100%;
+    max-height: 0px;
+    padding: 1rem;
+    font-family: var(--font-body);
+    color: #303030;
+    font-size: medium;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+    background-color: #2fe9e330;
+    margin-bottom: 2rem;
+  }
+  p.learn {
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  p.learn::-webkit-scrollbar {
+    width: none;
+    background: transparent;
+  }
+}
+
+#ingredient-title {
+  font-family: var(--font-headline);
+  padding: 0.6rem;
+  font-size: var(--large-font);
+  color: var(--variant-color);
+}
+
+/* ******************************************
+ ** The css rules for the detail page view.
+ ** *************************************** */
+#details-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.details-image-con {
+  width: 300px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .details-image {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+}
+.info {
+  color: var(--variant-color);
+  font-family: var(--font-headline);
+  h3,
+  h4,
+  p {
+    padding: 0.3rem;
+  }
+}
+#meal-youTube {
+  text-decoration: none;
+  padding: 0.8rem;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+}
+#meal-youTube:hover {
+  border: none;
+  background-color: red;
+  color: white;
 }
 /* ******************************************
  ** The @media css rules starts from here.
  ** *************************************** */
-@media screen and(min-width: 500px) {
+@media screen and (max-width: 500px) {
+  .category {
+    li {
+      overflow-y: auto;
+    }
+  }
+  #name {
+    font-weight: 500;
+  }
 }

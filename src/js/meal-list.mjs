@@ -44,6 +44,8 @@ export default class Meals {
    ** to render the meals to the page.
    ** *************************************** */
   async renderMealList() {
+    const label = document.querySelector(".label");
+    label.textContent = this.parameter;
     const mealListElement = document.querySelector(".list");
     mealListElement.innerHTML = "<li> Loading meals...</li>";
     try {

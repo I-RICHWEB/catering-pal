@@ -106,13 +106,12 @@ export default class MealDetails {
     const dropBtn = document.getElementById("dropdown-btn");
     const ingredMeasure = document.querySelector("#meal-guide");
     const instruct = document.getElementById("instruction");
+    const sign = document.getElementById("sign");
 
     dropBtn.addEventListener("click", () => {
-      ingredMeasure.style.display =
-        ingredMeasure.style.display === "block" ? "none" : "block";
-
-      instruct.style.display =
-        instruct.style.display === "block" ? "none" : "block";
+      ingredMeasure.classList.toggle("learn");
+      instruct.classList.toggle("learn");
+      sign.classList.toggle("learn");
     });
   }
 }
