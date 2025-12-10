@@ -62,6 +62,7 @@ export async function loadHeaderFooter() {
   const footerElement = document.querySelector(".footer");
   renderTemplate(headerData, headerElement);
   renderTemplate(footerData, footerElement);
+  navViewLink();
 }
 
 /* ******************************************
@@ -73,4 +74,43 @@ export function getParameter(key) {
   const pageUrl = new URLSearchParams(searchStr);
   const parameter = pageUrl.get(key);
   return parameter;
+}
+
+/* ******************************************
+ ** This function will set items to localStorage
+ ** *************************************** */
+export function addToLocalStorage(key, mealData) {
+  localStorage.setItem(key, JSON.stringify(mealData));
+}
+
+/* ******************************************
+ ** This function will get localStorage items
+ ** and return it back as a json object.
+ ** *************************************** */
+export function getLocalStorageItem(key) {
+  const data = localStorage.getItem(key);
+  return JSON.parse(data);
+}
+
+/* ******************************************
+ ** This function will check for the existence
+ ** of meals in the localStorage and return a
+ ** boolean.
+ ** *************************************** */
+export function checkMealExistence(meal, storageItem) {
+  const exist = storageItem.some((ml) => ml.idMeal === meal.idMeal);
+  return exist;
+}
+
+/* ******************************************
+ ** This function will toggle the nav link for
+ ** small screen sizes.
+ ** *************************************** */
+export function navViewLink() {
+  const btn = document.getElementById("select-nav");
+  const slide = document.getElementById("nav-link");
+
+  btn.addEventListener("click", () => {
+    slide.classList.toggle("show");
+  });
 }

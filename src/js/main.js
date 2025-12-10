@@ -1,8 +1,9 @@
 /* ******************************************
  ** Importing all the neccessary tools.
  ** *************************************** */
-import { heroSlideShow, loadHeaderFooter } from "./utility.mjs";
+import { heroSlideShow, loadHeaderFooter, navViewLink } from "./utility.mjs";
 import Categories from "./categories.mjs";
+import { renderRecentlyViewed } from "./recentView.mjs";
 
 /* ******************************************
  ** Calling the heroSlideShow function to action
@@ -21,3 +22,9 @@ loadHeaderFooter();
  ** *************************************** */
 const category = new Categories();
 category.init();
+
+/* ******************************************
+ ** Calling the renderRecentlyViewed meals
+ ** function.
+ ** *************************************** */
+renderRecentlyViewed();

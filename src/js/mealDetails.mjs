@@ -2,6 +2,7 @@
  ** Importing all the neccessary tools.
  ** *************************************** */
 import ApiServices from "./apiServices.mjs";
+// import SettingLearned from "./Learned.mjs";
 
 /* ******************************************
  ** Creating a new instance of the APIService
