@@ -409,6 +409,13 @@ h2 {
     background: transparent;
   }
 }
+#learn-cat {
+  font-family: var(--font-headline);
+  font-size: large;
+  padding-left: 0.4rem;
+  padding-top: 0.4rem;
+  color: var(--secondary-color);
+}
 
 /* ******************************************
  ** The css rules for the dropdown information

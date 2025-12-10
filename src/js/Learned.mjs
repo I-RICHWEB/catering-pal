@@ -115,7 +115,7 @@ export class RenderLearnedMeals {
         <img class="cate-img" src="${meal.strMealThumb}" alt="${meal.strMeal}-meal.jpg" />
         </div>
         <h3>${meal.strMeal}</h3>
-        <p>Category: ${meal.strCategory}</p>
+        <p id="learn-cat">Category: ${meal.strCategory}</p>
         </a>`;
     return li;
   }
